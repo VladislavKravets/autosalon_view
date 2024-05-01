@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav ul li {
+    margin-right: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+nav ul li a {
+    text-decoration: none;
+    color: #333;
 }
 
-.App-link {
-  color: #61dafb;
+nav ul li a.active {
+    font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* booked */
+.booked-list {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.booked-list h2 {
+    margin-bottom: 10px;
+}
+
+.booked-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.booked-list th,
+.booked-list td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.booked-list th {
+    background-color: #f2f2f2;
+}
+
+.booked-list tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.booked-list button {
+    margin-right: 5px;
 }
