@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.API_BASE_URL
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL
 
 // Отримати всіх клієнтів
 export const getCarsCategory = async () => {
@@ -26,6 +26,7 @@ export const getCarsCategoryById = async (id) => {
 // Створити нове бронювання
 export const createCarsCategory = async (clientData) => {
     try {
+        console.log(clientData)
         const response = await axios.post(`${API_BASE_URL}/car-categories`, clientData);
         return response.data;
     } catch (error) {
